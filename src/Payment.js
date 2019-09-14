@@ -4,16 +4,31 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 class Payment extends Component {
     render() {
         return (
-            <nav className="navbar navbar-light navbar-expand-md" id="navbarbootom"
-                 style={{backgroundColor: '#fee600', opacity: 1}}>
-                <div className="container-fluid">
-                    <Link to='/'><i className="far fa-money-bill-alt" style={{fontSize: '33px'}}></i></Link>
-                    <Link to='/history'><i className="fas fa-history" style={{fontSize: '33px'}}></i></Link>
-                    <Link to='/'><i className="fas fa-map-marked-alt" style={{fontSize: '33px'}}></i></Link>
-                    <Link to='/'><i className="fab fa-cc-apple-pay" style={{fontSize: '33px'}}></i></Link>
+
+            <div className="newsletter-subscribe">
+                <div className="container">
+                    <div className="intro">
+                        <h2 className="text-center">Демо оплата</h2>
+                        <p className="text-center">Введите нужную сумму и нажмите "Оплатить"</p>
+                    </div>
+                    <form className="form-inline" method="post" >
+                        <div className="form-group"><input id="input-summ" className="form-control" placeholder="Сумма" /></div>
+                        <div className="form-group"><button className="btn btn-primary" onClick={this.onClick}>Оплатить</button></div>
+                    </form>
                 </div>
-            </nav>
-        )
+            </div>
+        );
+    }
+
+    onClick = e => {
+        const xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+        // TODO адрес бека в конфигурационный файл
+        const theUrl = "http://10.91.6.2:8080/transaction";
+        xmlhttp.open("POST", theUrl);
+        xmlhttp.send(JSON.stringify({sender: '1', recipient: '2', cash: '' + document.getElementById('input-summ').value}));
+
+        e.preventDefault()
+        e.stopPropagation()
     }
 }
 
