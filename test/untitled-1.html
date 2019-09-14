@@ -4,13 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Untitled</title>
+    <title>Untitled (copy)</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/untitled.css">
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="template.css" />
+    <script type="text/javascript" src='test-credentials.js'></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
 </head>
 
 <body>
@@ -123,15 +132,16 @@
             </div>
             </nav>
             <div class="container-fluid">
-                <div class="d-sm-flex justify-content-between align-items-center mb-4"><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#" style="background-color: #faeb00;filter: brightness(101%);color: #000000;"><i class="fas fa-download fa-sm text-white-50" style="filter: blur(0px) brightness(0%);"></i>&nbsp;Выгрузить аналитику</a>
-                    <nav
-                        class="navbar navbar-light navbar-expand-md">
+                <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                    <nav class="navbar navbar-light navbar-expand-md">
                         <div class="container-fluid">
-                            <h3 class="text-dark mb-0">Партнеры банка</h3><i class="fa fa-map" style="font-size: 37px;"></i></div>
-                        </nav>
+                            <h3 class="text-dark mb-0">Партнеры Банка</h3><i class="fas fa-map" style="font-size: 37px;"></i></div>
+                    </nav>
                 </div>
             </div>
         </div>
+            <div id="map"></div>
+            <script type="text/javascript" src='demo.js'></script>
         <footer class="bg-white sticky-footer">
             <div class="container my-auto">
                 <div class="text-center my-auto copyright"><span>Our color is yellow © 2019</span></div>
@@ -140,7 +150,7 @@
     </div>
     </div>
     <nav class="navbar navbar-light navbar-expand-md" id="navbarbootom" style="background-color: #fee600;opacity: 1;">
-        <div class="container-fluid"><i class="far fa-money-bill-alt" style="font-size: 33px;"></i><i class="fas fa-history" style="font-size: 33px;"></i><i class="fas fa-map-marked-alt" style="font-size: 33px;"></i><i class="fab fa-cc-apple-pay" style="font-size: 33px;"></i></div>
+            <div class="container-fluid"><i class="far fa-money-bill-alt" style="font-size: 33px;"></i><i class="fas fa-history" style="font-size: 33px;"></i><i class="fas fa-map-marked-alt" style="font-size: 33px;"></i><i class="fab fa-cc-apple-pay" style="font-size: 33px;"></i></div>
     </nav>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
