@@ -16,18 +16,7 @@
 .far.fa-money-bill-alt {
 }
 
-.d-flex.justify-content-center.align-items-center {
-  margin: 0 auto;
-}
-
-.justify-content-center.align-items-center {
-  height: 400px;
-}
-
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
-  width: 100%;
-}
-
-[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+.btn.btn-primary.btn-block.text-white.btn-user {
+  /*background: #ffffff;*/
 }
 
