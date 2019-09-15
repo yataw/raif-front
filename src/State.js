@@ -11,7 +11,7 @@ class State {
         // TODO адрес бека в конфигурационный файл
         const theUrl = "http://10.91.6.2:8080/flashget";
         xmlhttp.open("POST", theUrl);
-        xmlhttp.send(JSON.stringify({id: "1"}));
+        xmlhttp.send(JSON.stringify({operation: 'flashget', id: "1"}));
         xmlhttp.onload = function (r) {
             self.onload(this.responseText)
         };

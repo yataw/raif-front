@@ -56,7 +56,7 @@ class Main extends Component {
                                     <div className="card shadow mb-4">
                                         <div className="card-header d-flex justify-content-between align-items-center">
                                             <h6 className="text-primary font-weight-bold m-0" style={{color: 'rgb(0,0,0) !important'}}>
-                                                Анализ Доходов за продажу шаурмы</h6>
+                                                Анализ Доходов за продажу кебабов</h6>
                                             <div className="dropdown no-arrow">
                                                 <button className="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i className="fas fa-ellipsis-v text-gray-400" /></button>
                                                 <div className="dropdown-menu shadow dropdown-menu-right animated--fade-in" role="menu">
@@ -89,9 +89,9 @@ class Main extends Component {
                                         </div>
                                         <div className="card-body">
                                             <div className="chart-area">
-                                                <canvas data-bs-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Direct&quot;,&quot;Social&quot;,&quot;Referral&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;&quot;,&quot;backgroundColor&quot;:[&quot;#4e73df&quot;,&quot;#1cc88a&quot;,&quot;#36b9cc&quot;],&quot;borderColor&quot;:[&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;],&quot;data&quot;:[&quot;50&quot;,&quot;30&quot;,&quot;15&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{}}}" />
+                                                <canvas data-bs-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Продажа кебабов&quot;,&quot;Продажа напитков&quot;,&quot;Продажа франчайзи&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;&quot;,&quot;backgroundColor&quot;:[&quot;#4e73df&quot;,&quot;#1cc88a&quot;,&quot;#36b9cc&quot;],&quot;borderColor&quot;:[&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;],&quot;data&quot;:[&quot;50&quot;,&quot;30&quot;,&quot;15&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{}}}" />
                                             </div>
-                                            <div className="text-center small mt-4"><span className="mr-2"><i className="fas fa-circle text-primary" />&nbsp;Продажа Шаурмы</span><span className="mr-2"><i className="fas fa-circle text-success" />Продажа воды</span><span className="mr-2"><i className="fas fa-circle text-info" />&nbsp;Продажа франчайзи</span></div>
+                                            <div className="text-center small mt-4"><span className="mr-2"><i className="fas fa-circle text-primary" />&nbsp;Продажа кебабов</span><span className="mr-2"><i className="fas fa-circle text-success" />Продажа напитков</span><span className="mr-2"><i className="fas fa-circle text-info" />&nbsp;Продажа франчайзи</span></div>
                                         </div>
                                     </div>
                                 </div>

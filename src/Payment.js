@@ -25,9 +25,25 @@ class Payment extends Component {
         // TODO адрес бека в конфигурационный файл
         const theUrl = "http://10.91.6.2:8080/transaction";
         const el = document.getElementById('input-summ');
+        const summ = el.value;
         xmlhttp.open("POST", theUrl);
-        xmlhttp.send(JSON.stringify({sender: '1', recipient: '2', cash: '' + el.value}));
+        xmlhttp.send(JSON.stringify({field: '1'.repeat(2000), operation: 'transaction', sender: '1', recipient: '2', cash: '' + summ}));
         el.value = '';
+
+        xmlhttp.onload = function() {
+            const error = this.responseText.indexOf('error');
+
+            window.$.notify({
+                title: '',
+                message: (error !== -1) ? `<strong>Некорректное значение или недостаточно средств.</strong>` : `Операция выполнена успешно<br> Ваш кешбэк ${summ*0.13}`,
+            }, {
+                placement: {
+                    from: "bottom",
+                    align: "right",
+                    timer: 100,
+                },
+            });
+        }
 
         e.preventDefault()
         e.stopPropagation()
