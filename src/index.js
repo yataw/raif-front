@@ -2,7 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import State from './State';
 import * as serviceWorker from './serviceWorker';
+
+// TODO проанализировать ворнинги
+console.warn = () => {};
+window.state = new State();
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

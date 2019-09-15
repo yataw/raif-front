@@ -12,7 +12,7 @@ class Payment extends Component {
                         <p className="text-center">Введите нужную сумму и нажмите "Оплатить"</p>
                     </div>
                     <form className="form-inline" method="post" >
-                        <div className="form-group"><input id="input-summ" className="form-control" placeholder="Сумма" /></div>
+                        <div className="form-group"><input id="input-summ" className="form-control" placeholder="Сумма" autoFocus/></div>
                         <div className="form-group"><button className="btn btn-primary" onClick={this.onClick}>Оплатить</button></div>
                     </form>
                 </div>
@@ -24,8 +24,10 @@ class Payment extends Component {
         const xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
         // TODO адрес бека в конфигурационный файл
         const theUrl = "http://10.91.6.2:8080/transaction";
+        const el = document.getElementById('input-summ');
         xmlhttp.open("POST", theUrl);
-        xmlhttp.send(JSON.stringify({sender: '1', recipient: '2', cash: '' + document.getElementById('input-summ').value}));
+        xmlhttp.send(JSON.stringify({sender: '1', recipient: '2', cash: '' + el.value}));
+        el.value = '';
 
         e.preventDefault()
         e.stopPropagation()

@@ -8,7 +8,7 @@ class Main extends Component {
 
                         <div className="container-fluid">
                             <div className="d-sm-flex justify-content-between align-items-center mb-4">
-                                <h3 className="text-dark mb-0">ООО "Шаурма Про"</h3><a className="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#" style={{backgroundColor: '#faeb00', filter: 'brightness(101%)', color: '#000000'}}><i className="fas fa-download fa-sm text-white-50" style={{filter: 'blur(0px) brightness(0%)'}} />&nbsp;Выгрузить
+                                <h3 className="text-dark mb-0">ООО "Кебаб Про"</h3><a className="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="#" style={{backgroundColor: '#faeb00', filter: 'brightness(101%)', color: '#000000'}}><i className="fas fa-download fa-sm text-white-50" style={{filter: 'blur(0px) brightness(0%)'}} />&nbsp;Выгрузить
                                 аналитику</a></div>
                             <div className="row">
                                 <div className="col-md-6 col-xl-3 mb-4">
@@ -17,7 +17,7 @@ class Main extends Component {
                                             <div className="row align-items-center no-gutters">
                                                 <div className="col mr-2">
                                                     <div className="text-uppercase text-primary font-weight-bold text-xs mb-1"><span style={{color: 'rgb(0,0,0)'}}>Баланс</span></div>
-                                                    <div className="text-dark font-weight-bold h5 mb-0"><span>500 000 руб</span></div>
+                                                    <div className="text-dark font-weight-bold h5 mb-0"><span id="id-balance"></span></div>
                                                 </div>
                                                 <div className="col-auto"><i className="fas fa-ruble-sign fa-2x text-gray-300" /></div>
                                             </div>
@@ -141,6 +141,21 @@ class Main extends Component {
                     </div>
                 </div>
             )
+    };
+
+    componentWillMount() {
+            window.state.update();
+    }
+
+    componentDidMount() {
+        const $ = window.$;
+
+        $(document).ready(function(){
+
+            $('[data-bs-chart]').each(function(index, elem) {
+                var chart = new window.Chart($(elem), $(elem).data('bs-chart'));
+            });
+        });
     }
 }
 
