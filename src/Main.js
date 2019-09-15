@@ -56,7 +56,7 @@ class Main extends Component {
                                     <div className="card shadow mb-4">
                                         <div className="card-header d-flex justify-content-between align-items-center">
                                             <h6 className="text-primary font-weight-bold m-0" style={{color: 'rgb(0,0,0) !important'}}>
-                                                Анализ Доходов за продажу кебабов</h6>
+                                                Анализ доходов за продажу кебабов</h6>
                                             <div className="dropdown no-arrow">
                                                 <button className="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i className="fas fa-ellipsis-v text-gray-400" /></button>
                                                 <div className="dropdown-menu shadow dropdown-menu-right animated--fade-in" role="menu">
@@ -77,7 +77,7 @@ class Main extends Component {
                                     <div className="card shadow mb-4">
                                         <div className="card-header d-flex justify-content-between align-items-center">
                                             <h6 className="text-primary font-weight-bold m-0" style={{color: 'rgb(0,0,0) !important'}}>
-                                                Источники Дохода</h6>
+                                                Источники дохода</h6>
                                             <div className="dropdown no-arrow">
                                                 <button className="btn btn-link btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button"><i className="fas fa-ellipsis-v text-gray-400" /></button>
                                                 <div className="dropdown-menu shadow dropdown-menu-right animated--fade-in" role="menu">
